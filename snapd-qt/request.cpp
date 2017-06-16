@@ -72,76 +72,76 @@ void QSnapdRequest::finish (void *error)
             switch ((SnapdError) e->code)
             {
             case SNAPD_ERROR_CONNECTION_FAILED:
-                d->error = QSnapdRequest::QSnapdError::ConnectionFailed;
+                d->error = ConnectionFailed;
                 break;
             case SNAPD_ERROR_WRITE_FAILED:
-                d->error = QSnapdRequest::QSnapdError::WriteFailed;
+                d->error = WriteFailed;
                 break;
             case SNAPD_ERROR_READ_FAILED:
-                d->error = QSnapdRequest::QSnapdError::ReadFailed;
+                d->error = ReadFailed;
                 break;
             case SNAPD_ERROR_BAD_REQUEST:
-                d->error = QSnapdRequest::QSnapdError::BadRequest;
+                d->error = BadRequest;
                 break;
             case SNAPD_ERROR_BAD_RESPONSE:
-                d->error = QSnapdRequest::QSnapdError::BadResponse;
+                d->error = BadResponse;
                 break;
             case SNAPD_ERROR_AUTH_DATA_REQUIRED:
-                d->error = QSnapdRequest::QSnapdError::AuthDataRequired;
+                d->error = AuthDataRequired;
                 break;
             case SNAPD_ERROR_AUTH_DATA_INVALID:
-                d->error = QSnapdRequest::QSnapdError::AuthDataInvalid;
+                d->error = AuthDataInvalid;
                 break;
             case SNAPD_ERROR_TWO_FACTOR_REQUIRED:
-                d->error = QSnapdRequest::QSnapdError::TwoFactorRequired;
+                d->error = TwoFactorRequired;
                 break;
             case SNAPD_ERROR_TWO_FACTOR_INVALID:
-                d->error = QSnapdRequest::QSnapdError::TwoFactorInvalid;
+                d->error = TwoFactorInvalid;
                 break;
             case SNAPD_ERROR_PERMISSION_DENIED:
-                d->error = QSnapdRequest::QSnapdError::PermissionDenied;
+                d->error = PermissionDenied;
                 break;
             case SNAPD_ERROR_FAILED:
-                d->error = QSnapdRequest::QSnapdError::Failed;
+                d->error = Failed;
                 break;
             case SNAPD_ERROR_TERMS_NOT_ACCEPTED:
-                d->error = QSnapdRequest::QSnapdError::TermsNotAccepted;
+                d->error = TermsNotAccepted;
                 break;
             case SNAPD_ERROR_PAYMENT_NOT_SETUP:
-                d->error = QSnapdRequest::QSnapdError::PaymentNotSetup;
+                d->error = PaymentNotSetup;
                 break;
             case SNAPD_ERROR_PAYMENT_DECLINED:
-                d->error = QSnapdRequest::QSnapdError::PaymentDeclined;
+                d->error = PaymentDeclined;
                 break;
             case SNAPD_ERROR_ALREADY_INSTALLED:
-                d->error = QSnapdRequest::QSnapdError::AlreadyInstalled;
+                d->error = AlreadyInstalled;
                 break;
             case SNAPD_ERROR_NOT_INSTALLED:
-                d->error = QSnapdRequest::QSnapdError::NotInstalled;
+                d->error = NotInstalled;
                 break;
             case SNAPD_ERROR_NO_UPDATE_AVAILABLE:
-                d->error = QSnapdRequest::QSnapdError::NoUpdateAvailable;
+                d->error = NoUpdateAvailable;
                 break;
             case SNAPD_ERROR_PASSWORD_POLICY_ERROR:
-                d->error = QSnapdRequest::QSnapdError::PasswordPolicyError;
+                d->error = PasswordPolicyError;
                 break;
             case SNAPD_ERROR_NEEDS_DEVMODE:
-                d->error = QSnapdRequest::QSnapdError::NeedsDevmode;
+                d->error = NeedsDevmode;
                 break;
             case SNAPD_ERROR_NEEDS_CLASSIC:
-                d->error = QSnapdRequest::QSnapdError::NeedsClassic;
+                d->error = NeedsClassic;
                 break;
             case SNAPD_ERROR_NEEDS_CLASSIC_SYSTEM:
-                d->error = QSnapdRequest::QSnapdError::NeedsClassicSystem;
+                d->error = NeedsClassicSystem;
                 break;
             default:
                 /* This indicates we should add a new entry here... */
-                d->error = QSnapdRequest::QSnapdError::UnknownError;
+                d->error = UnknownError;
                 break;
             }
         }
         else
-            d->error = QSnapdRequest::QSnapdError::UnknownError;
+            d->error = UnknownError;
         d->errorString = e->message;
     }
     emit complete ();

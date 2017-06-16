@@ -34,14 +34,14 @@ QSnapdAlias::QSnapdAliasStatus QSnapdAlias::status () const
     {
     default:
     case SNAPD_ALIAS_STATUS_UNKNOWN:
-        return QSnapdAliasStatus::Unknown;
+        return Unknown;
     case SNAPD_ALIAS_STATUS_DEFAULT:
-        return QSnapdAliasStatus::Default;
+        return Default;
     case SNAPD_ALIAS_STATUS_ENABLED:
-        return QSnapdAliasStatus::Enabled;
+        return Enabled;
     case SNAPD_ALIAS_STATUS_DISABLED:
-        return QSnapdAliasStatus::Disabled;
+        return Disabled;
     case SNAPD_ALIAS_STATUS_AUTO:
-      return QSnapdAliasStatus::Auto;
+      return Auto;
     }
 }

@@ -976,9 +976,9 @@ static SnapdFindFlags convertFindFlags (int flags)
 {
     int result = SNAPD_FIND_FLAGS_NONE;
 
-    if ((flags & QSnapdClient::FindFlag::MatchName) != 0)
+    if ((flags & QSnapdClient::MatchName) != 0)
         result |= SNAPD_FIND_FLAGS_MATCH_NAME;
-    if ((flags & QSnapdClient::FindFlag::SelectPrivate) != 0)
+    if ((flags & QSnapdClient::SelectPrivate) != 0)
         result |= SNAPD_FIND_FLAGS_SELECT_PRIVATE;
 
     return (SnapdFindFlags) result;
@@ -1103,13 +1103,13 @@ static SnapdInstallFlags convertInstallFlags (int flags)
 {
     int result = SNAPD_INSTALL_FLAGS_NONE;
 
-    if ((flags & QSnapdClient::InstallFlag::Classic) != 0)
+    if ((flags & QSnapdClient::Classic) != 0)
         result |= SNAPD_INSTALL_FLAGS_CLASSIC;
-    if ((flags & QSnapdClient::InstallFlag::Dangerous) != 0)
+    if ((flags & QSnapdClient::Dangerous) != 0)
         result |= SNAPD_INSTALL_FLAGS_DANGEROUS;
-    if ((flags & QSnapdClient::InstallFlag::Devmode) != 0)
+    if ((flags & QSnapdClient::Devmode) != 0)
         result |= SNAPD_INSTALL_FLAGS_DEVMODE;
-    if ((flags & QSnapdClient::InstallFlag::Jailmode) != 0)
+    if ((flags & QSnapdClient::Jailmode) != 0)
         result |= SNAPD_INSTALL_FLAGS_JAILMODE;
 
     return (SnapdInstallFlags) result;
